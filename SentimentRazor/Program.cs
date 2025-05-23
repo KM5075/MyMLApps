@@ -1,7 +1,12 @@
+using Microsoft.Extensions.ML;
+using static SentimentRazor.SentimentRazor;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddPredictionEnginePool<ModelInput, ModelOutput>()
+    .FromFile("SentimentRazor.mbconfig");
 
 var app = builder.Build();
 
