@@ -10,14 +10,28 @@ namespace SentimentRazor.Pages
         private readonly ILogger<IndexModel> _logger;
         private readonly PredictionEnginePool<ModelInput, ModelOutput> _predictionEnginePool;
 
-        public IndexModel(ILogger<IndexModel> logger)
+        public IndexModel(ILogger<IndexModel> logger, PredictionEnginePool<ModelInput,ModelOutput> predictionEnginePool)
         {
             _logger = logger;
+            _predictionEnginePool = predictionEnginePool;
         }
 
         public void OnGet()
         {
 
+        }
+
+        public IActionResult OnGetAnalyzeSentiment([FromQuery]string sentimentText)
+        {
+            if (string.IsNullOrWhiteSpace(sentimentText))
+            {
+                return Content("Please provide a sentiment text to analyze.");
+            }
+            var input = new ModelInput { SentimentText = sentimentText };
+            var prediction = _predictionEnginePool.Predict(input);
+            var sentiment = Convert.ToBoolean(prediction.PredictedLabel) ? "Toxic" : "Not Toxic";
+
+            return Content(sentiment);
         }
     }
 }
