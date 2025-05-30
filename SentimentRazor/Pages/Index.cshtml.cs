@@ -25,7 +25,7 @@ namespace SentimentRazor.Pages
         {
             if (string.IsNullOrWhiteSpace(sentimentText))
             {
-                return Content("Please provide a sentiment text to analyze.");
+                return Content("Neutral");
             }
             var input = new ModelInput { SentimentText = sentimentText };
             var prediction = _predictionEnginePool.Predict(input);
