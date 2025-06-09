@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SentimentRazor", "Sentiment
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestaurantViolations", "RestaurantViolations\RestaurantViolations.csproj", "{1D69D8A1-7432-404F-946F-FADF18385424}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestaurantViolations_ConsoleApp1", "RestaurantViolations_ConsoleApp1\RestaurantViolations_ConsoleApp1.csproj", "{54757996-EB22-43B1-B2FF-FD6517ADADDF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{1D69D8A1-7432-404F-946F-FADF18385424}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D69D8A1-7432-404F-946F-FADF18385424}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D69D8A1-7432-404F-946F-FADF18385424}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54757996-EB22-43B1-B2FF-FD6517ADADDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54757996-EB22-43B1-B2FF-FD6517ADADDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54757996-EB22-43B1-B2FF-FD6517ADADDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54757996-EB22-43B1-B2FF-FD6517ADADDF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

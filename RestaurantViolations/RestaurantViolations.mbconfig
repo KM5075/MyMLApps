@@ -1,0 +1,302 @@
+﻿{
+  "Scenario": "Classification",
+  "DataSource": {
+    "Type": "SQL",
+    "Version": 1,
+    "ColumnProperties": [
+      {
+        "ColumnName": "InspectionType",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "ViolationDescription",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "RiskCategory",
+        "ColumnPurpose": "Label",
+        "ColumnDataFormat": "String",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 5
+      }
+    ],
+    "ConnectionString": "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\wsosc\\Prog\\CSharp\\repos\\MyMLApps\\RestaurantViolations\\RestaurantScores\\RestaurantScores\\RestaurantScores.mdf;Integrated Security=True;Connect Timeout=30",
+    "CommandString": "SELECT CAST([InspectionType] as NVARCHAR(MAX)), CAST([ViolationDescription] as NVARCHAR(MAX)), CAST([RiskCategory] as NVARCHAR(MAX)) FROM [dbo].[Violations]",
+    "DatabaseName": "C:\\USERS\\WSOSC\\PROG\\CSHARP\\REPOS\\MYMLAPPS\\RESTAURANTVIOLATIONS\\RESTAURANTSCORES\\RESTAURANTSCORES\\RESTAURANTSCORES.MDF",
+    "SelectedTableDbo": "dbo",
+    "TableName": "Violations"
+  },
+  "Environment": {
+    "Type": "LocalCPU",
+    "Version": 1
+  },
+  "RunHistory": {
+    "Version": 3,
+    "Type": "Result",
+    "Trials": [
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "LightGbmMulti",
+        "Score": 1.0,
+        "RuntimeInSeconds": 2.846,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e3 * e6 * e11",
+          "e0": {
+            "InputColumnName": "InspectionType",
+            "OutputColumnName": "InspectionType"
+          },
+          "e1": {
+            "InputColumnName": "ViolationDescription",
+            "OutputColumnName": "ViolationDescription"
+          },
+          "e11": {
+            "OutputColumnName": "PredictedLabel",
+            "InputColumnName": "PredictedLabel"
+          },
+          "e2": {
+            "InputColumnNames": [
+              "InspectionType",
+              "ViolationDescription"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e3": {
+            "OutputColumnName": "RiskCategory",
+            "InputColumnName": "RiskCategory",
+            "AddKeyValueAnnotationsAsText": false
+          },
+          "e6": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "LearningRate": 0.99999977667298645,
+            "NumberOfTrees": 863,
+            "SubsampleFraction": 0.99999977667298645,
+            "MaximumBinCountPerFeature": 227,
+            "FeatureFraction": 0.99999999,
+            "L1Regularization": 2E-10,
+            "L2Regularization": 0.99999977667298645,
+            "LabelColumnName": "RiskCategory",
+            "FeatureColumnName": "Features"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "LightGbmMulti",
+        "Score": 1.0,
+        "RuntimeInSeconds": 3.75,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e3 * e6 * e11",
+          "e0": {
+            "InputColumnName": "InspectionType",
+            "OutputColumnName": "InspectionType"
+          },
+          "e1": {
+            "InputColumnName": "ViolationDescription",
+            "OutputColumnName": "ViolationDescription"
+          },
+          "e11": {
+            "OutputColumnName": "PredictedLabel",
+            "InputColumnName": "PredictedLabel"
+          },
+          "e2": {
+            "InputColumnNames": [
+              "InspectionType",
+              "ViolationDescription"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e3": {
+            "OutputColumnName": "RiskCategory",
+            "InputColumnName": "RiskCategory",
+            "AddKeyValueAnnotationsAsText": false
+          },
+          "e6": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "LearningRate": 0.40968607780073746,
+            "NumberOfTrees": 1247,
+            "SubsampleFraction": 0.45884022581655343,
+            "MaximumBinCountPerFeature": 227,
+            "FeatureFraction": 0.99999999,
+            "L1Regularization": 9.1290385988140758E-10,
+            "L2Regularization": 0.99999977667298645,
+            "LabelColumnName": "RiskCategory",
+            "FeatureColumnName": "Features"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "FastForestOva",
+        "Score": 1.0,
+        "RuntimeInSeconds": 2.079,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e3 * e5 * e11",
+          "e0": {
+            "InputColumnName": "InspectionType",
+            "OutputColumnName": "InspectionType"
+          },
+          "e1": {
+            "InputColumnName": "ViolationDescription",
+            "OutputColumnName": "ViolationDescription"
+          },
+          "e11": {
+            "OutputColumnName": "PredictedLabel",
+            "InputColumnName": "PredictedLabel"
+          },
+          "e2": {
+            "InputColumnNames": [
+              "InspectionType",
+              "ViolationDescription"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e3": {
+            "OutputColumnName": "RiskCategory",
+            "InputColumnName": "RiskCategory",
+            "AddKeyValueAnnotationsAsText": false
+          },
+          "e5": {
+            "NumberOfTrees": 4,
+            "NumberOfLeaves": 4,
+            "FeatureFraction": 0.9675661,
+            "LabelColumnName": "RiskCategory",
+            "FeatureColumnName": "Features"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "LightGbmMulti",
+        "Score": 1.0,
+        "RuntimeInSeconds": 5.884,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e3 * e6 * e11",
+          "e0": {
+            "InputColumnName": "InspectionType",
+            "OutputColumnName": "InspectionType"
+          },
+          "e1": {
+            "InputColumnName": "ViolationDescription",
+            "OutputColumnName": "ViolationDescription"
+          },
+          "e11": {
+            "OutputColumnName": "PredictedLabel",
+            "InputColumnName": "PredictedLabel"
+          },
+          "e2": {
+            "InputColumnNames": [
+              "InspectionType",
+              "ViolationDescription"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e3": {
+            "OutputColumnName": "RiskCategory",
+            "InputColumnName": "RiskCategory",
+            "AddKeyValueAnnotationsAsText": false
+          },
+          "e6": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 21,
+            "LearningRate": 0.99999977667298645,
+            "NumberOfTrees": 2386,
+            "SubsampleFraction": 0.99999977667298645,
+            "MaximumBinCountPerFeature": 250,
+            "FeatureFraction": 0.99183416166330385,
+            "L1Regularization": 2.8482864027097261E-10,
+            "L2Regularization": 0.64405656624564245,
+            "LabelColumnName": "RiskCategory",
+            "FeatureColumnName": "Features"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "FastForestOva",
+        "Score": 1.0,
+        "RuntimeInSeconds": 2.124,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e3 * e5 * e11",
+          "e0": {
+            "InputColumnName": "InspectionType",
+            "OutputColumnName": "InspectionType"
+          },
+          "e1": {
+            "InputColumnName": "ViolationDescription",
+            "OutputColumnName": "ViolationDescription"
+          },
+          "e11": {
+            "OutputColumnName": "PredictedLabel",
+            "InputColumnName": "PredictedLabel"
+          },
+          "e2": {
+            "InputColumnNames": [
+              "InspectionType",
+              "ViolationDescription"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e3": {
+            "OutputColumnName": "RiskCategory",
+            "InputColumnName": "RiskCategory",
+            "AddKeyValueAnnotationsAsText": false
+          },
+          "e5": {
+            "NumberOfTrees": 4,
+            "NumberOfLeaves": 5,
+            "FeatureFraction": 0.9108223,
+            "LabelColumnName": "RiskCategory",
+            "FeatureColumnName": "Features"
+          }
+        }
+      }
+    ],
+    "Estimators": {
+      "e0": "FeaturizeText",
+      "e1": "FeaturizeText",
+      "e2": "Concatenate",
+      "e3": "MapValueToKey",
+      "e4": "FastTreeOva",
+      "e5": "FastForestOva",
+      "e6": "LightGbmMulti",
+      "e7": "LbfgsLogisticRegressionOva",
+      "e8": "LbfgsMaximumEntropyMulti",
+      "e9": "SdcaMaximumEntropyMulti",
+      "e10": "SdcaLogisticRegressionOva",
+      "e11": "MapKeyToValue"
+    },
+    "Schema": "e0 * e1 * e2 * e3 * (e4 + e5 + e6 + e7 + e8 + e9 + e10) * e11",
+    "MetricName": "MacroAccuracy",
+    "ModelFilePath": "C:\\Users\\wsosc\\Prog\\CSharp\\repos\\MyMLApps\\RestaurantViolations\\RestaurantViolations.mlnet"
+  },
+  "Type": "TrainingConfig",
+  "Version": 5,
+  "TrainingOption": {
+    "Version": 2,
+    "Subsampling": false,
+    "Type": "ClassificationTrainingOption",
+    "TrainingTime": 60,
+    "LabelColumn": "RiskCategory",
+    "ValidationOption": {
+      "Version": 0,
+      "Type": "TrainValidateSplitValidationOption",
+      "SplitRatio": 0.2
+    }
+  }
+}
