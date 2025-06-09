@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PredictiveMaintenanceModel_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SentimentRazor", "SentimentRazor\SentimentRazor.csproj", "{F61616C4-9508-4D7B-B124-038BB770B943}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestaurantViolations", "RestaurantViolations\RestaurantViolations.csproj", "{1D69D8A1-7432-404F-946F-FADF18385424}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{F61616C4-9508-4D7B-B124-038BB770B943}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F61616C4-9508-4D7B-B124-038BB770B943}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F61616C4-9508-4D7B-B124-038BB770B943}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D69D8A1-7432-404F-946F-FADF18385424}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D69D8A1-7432-404F-946F-FADF18385424}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D69D8A1-7432-404F-946F-FADF18385424}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D69D8A1-7432-404F-946F-FADF18385424}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
