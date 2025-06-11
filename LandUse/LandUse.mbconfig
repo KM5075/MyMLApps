@@ -2,13 +2,12 @@
   "Scenario": "ImageClassification",
   "DataSource": {
     "Type": "Folder",
-    "Version": 1
+    "Version": 1,
+    "FolderPath": "C:\\Users\\wsosc\\Prog\\CSharp\\repos\\MyMLApps\\LandUse\\Data\\assets\\assets"
   },
   "Environment": {
-    "Type": "Azure",
-    "Version": 1,
-    "SubscriptionID": "00000000-0000-0000-0000-000000000000",
-    "ExperimentName": "landuse"
+    "Type": "LocalCPU",
+    "Version": 1
   },
   "Type": "TrainingConfig",
   "Version": 5,
