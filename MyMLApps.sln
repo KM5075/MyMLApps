@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LandUse", "LandUse\LandUse.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api_SentimentAnalysis", "Api_SentimentAnalysis\Api_SentimentAnalysis.csproj", "{01856364-B67E-4597-8634-57D4EE04BA9C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api_GitHubIssueClassification", "Api_GitHubIssueClassification\Api_GitHubIssueClassification.csproj", "{2B75D504-4A03-4168-931E-F5E0DF0C1D8C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{01856364-B67E-4597-8634-57D4EE04BA9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{01856364-B67E-4597-8634-57D4EE04BA9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{01856364-B67E-4597-8634-57D4EE04BA9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B75D504-4A03-4168-931E-F5E0DF0C1D8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B75D504-4A03-4168-931E-F5E0DF0C1D8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B75D504-4A03-4168-931E-F5E0DF0C1D8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B75D504-4A03-4168-931E-F5E0DF0C1D8C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
